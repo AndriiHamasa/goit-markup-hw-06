@@ -17,6 +17,10 @@ symbol-defs.svg
 
 #Exclude modal-close.svg file
 modal_close.svg
+form-email.svg
+form-person.svg 
+form-phone.svg 
+form-subscribe.svg 
 
 # Runtime data
 pids
