@@ -837,6 +837,11 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal-btn:hover .modal-icon,
+.modal-btn:focus .modal-icon{
+  fill: var(--accent-color);
+}
+
 /*Form of Hero section*/
 
 .common-burnt{
@@ -855,16 +860,52 @@ ul {
   font-weight: 700;
 }
 
-.modal-group{
+.modal-group-name,
+.modal-group-phone,
+.modal-group-mail{
   display: block;
   margin-bottom: 10px;
+}
+
+.modal-group-name,
+.modal-group-phone,
+.modal-group-mail,
+.modal-group-comment,
+.modal-group-agreement{
+
+  color: var(--primary-text-color);
+}
+
+.hero-user-name,
+.hero-user-phone,
+.hero-user-mail,
+.hero-comment{
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: unset;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-user-name:focus,
+.hero-user-phone:focus,
+.hero-user-mail:focus,
+.hero-comment:focus{
+  border-color: var(--accent-color);
+}
+
+.hero-user-name:focus + .modal-name-icon,
+.hero-user-phone:focus + .modal-name-icon,
+.hero-user-mail:focus + .modal-name-icon{
+  fill: var(--accent-color);
 }
 
 .modal-pole{
   position: relative;
 }
 
-.hero-user-name{
+.hero-user-name,
+.hero-user-phone,
+.hero-user-mail{
   display: block;
   width: 100%;
 
@@ -877,8 +918,10 @@ ul {
   position: absolute;
   top: 50%;
   left: 12px;
+  fill: var(--primary-title-color);
 
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-group-comment{
@@ -892,13 +935,51 @@ ul {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
+  margin-top: 4px;
 
   resize: none;
 }
 
 .modal-group-agreement{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
   margin-bottom: 30px;
+  user-select: none;
+}
+
+/*.modal-form-checkbox{
+  display: block;
+  appearance: none;
+
+  width: 16px;
+  height: 15px;
+
+  
+
+  
+  width: 16px;
+  height: 15px;
+  background-color: red;
+}*/
+
+.uncheck{
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-checkbox:checked + .checbox-modal .uncheck{
+  opacity: 0;
+}
+
+.check{
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-checkbox:checked + .checbox-modal .check{
+  opacity: 1;
 }
 
 .text-agreement{
@@ -907,6 +988,8 @@ ul {
 
 .agreement-link{
   color: var(--accent-color);
+  text-underline-position: under;
+  
 }
 
 .btn-send-modal{
