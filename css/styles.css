@@ -479,6 +479,7 @@ ul {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
   gap: 70px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -534,11 +535,6 @@ ul {
   color: var(--accent-color);
 }
 
-.socials-footer,
-.form-footer {
-  padding-top: 12px;
-}
-
 .footer-title,
 .text-ftr-form {
   font-size: 14px;
@@ -579,6 +575,11 @@ ul {
 
 /*Form of Footer*/
 
+.form-footer{
+  margin-left: auto;
+
+}
+
 .ftr-label {
   letter-spacing: 0.03em;
 
@@ -595,6 +596,14 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail-ftr-form:hover,
+.mail-ftr-form:focus{
+  border-color: var(--accent-color);
 }
 
 .form-ftr-btn {
@@ -781,6 +790,7 @@ ul {
   top: 50%;
   left: 50%;
 
+  padding: 40px;
   transform: translate(-50%, -50%);
 
   width: 528px;
@@ -838,10 +848,6 @@ ul {
 
 /*Form of Hero section*/
 
-.common-burnt {
-  padding: 40px;
-}
-
 .hero-form-text {
   margin-bottom: 12px;
 
@@ -879,6 +885,10 @@ ul {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.hero-user-name:hover,
+.hero-user-phone:hover,
+.hero-user-mail:hover,
+.hero-comment:hover,
 .hero-user-name:focus,
 .hero-user-phone:focus,
 .hero-user-mail:focus,
@@ -886,6 +896,9 @@ ul {
   border-color: var(--accent-color);
 }
 
+.hero-user-name:hover + .modal-name-icon,
+.hero-user-phone:hover + .modal-name-icon,
+.hero-user-mail:hover + .modal-name-icon,
 .hero-user-name:focus + .modal-name-icon,
 .hero-user-phone:focus + .modal-name-icon,
 .hero-user-mail:focus + .modal-name-icon {
@@ -977,6 +990,7 @@ ul {
 
 .text-agreement {
   display: inline-block;
+
 }
 
 .agreement-link {
